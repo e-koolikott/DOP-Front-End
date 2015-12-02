@@ -42,7 +42,8 @@ require.config({
     ngInfiniteScroll: '../bower_components/ngInfiniteScroll/build/ng-infinite-scroll',
     jquery: '../bower_components/jquery/dist/jquery',
     'ng-file-upload-shim': '../bower_components/ng-file-upload-shim/ng-file-upload-shim',
-    'ng-file-upload': '../bower_components/ng-file-upload/ng-file-upload'
+    'ng-file-upload': '../bower_components/ng-file-upload/ng-file-upload',
+    ngclipboard: '../bower_components/ngclipboard/dist/ngclipboard.min'
   },
   shim: {
     angular: {
@@ -93,6 +94,9 @@ require.config({
       'angular',
       'jquery'
     ],
+    ngclipboard: [
+      'angular'
+    ],
     app: [
       'angular',
       'angular-translate',
@@ -109,7 +113,7 @@ require.config({
   ]
 });
 
-define([
+require([
   'jquery',
   'angular',
   'app',
@@ -123,6 +127,7 @@ define([
   'angular-scroll',
   'ng-file-upload-shim',
   'ng-file-upload',
+  'ngclipboard',
   'translationService',
   'authenticatedUserService',
   'serverCallService',
