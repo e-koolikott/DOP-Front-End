@@ -1,15 +1,21 @@
+<!-- TODO: arrow changes direction right/down-->
+<!-- TODO: no parenthesis if no comments. or number 0 -->
 <!-- <md-card id="comments-card">
   <md-card-content> -->
-  <md-button>Kommentaarid (5) <md-icon class="md-primary" data-ng-class="{'toggled': showComments}" data-ng-click="showComments = !showComments">
-    keyboard_arrow_right
-  </md-icon></md-button>
-    <h3 class="comments-card-title">
+  <md-button data-ng-class="{'toggled': showComments}" data-ng-click="showComments = !showComments">
+    <span data-translate="COMMENTS_TITLE"></span>
+    <span>({{comments.length}})</span>
+    <md-icon class="md-primary" >
+      keyboard_arrow_right
+    </md-icon>
+  </md-button>
+    <!-- <h3 class="comments-card-title">
       <span data-translate="COMMENTS_TITLE"></span>
       <span>({{comments.length}})</span>
       <md-icon class="md-primary" data-ng-class="{'toggled': showComments}" data-ng-click="showComments = !showComments">
         keyboard_arrow_down
       </md-icon>
-    </h3>
+    </h3> -->
 
     <div data-ng-show="showComments">
       <md-list>
@@ -32,6 +38,6 @@
       <div layout="row" layout-align="end center">
         <md-button data-translate="ADD_COMMENT_BUTTON" data-ng-click="addComment()" class="md-raised md-primary"></md-button>
       </div>
-    </div>
+    </div> 
   <!-- </md-card-content>
-</md-card> -->
+</md-card>
