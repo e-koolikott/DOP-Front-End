@@ -1,13 +1,16 @@
-<md-card id="comments-card">
-  <md-card-content>
-    <h2 class="comments-card-title">
+<!-- <md-card id="comments-card">
+  <md-card-content> -->
+  <md-button>Kommentaarid (5) <md-icon class="md-primary" data-ng-class="{'toggled': showComments}" data-ng-click="showComments = !showComments">
+    keyboard_arrow_right
+  </md-icon></md-button>
+    <h3 class="comments-card-title">
       <span data-translate="COMMENTS_TITLE"></span>
       <span>({{comments.length}})</span>
       <md-icon class="md-primary" data-ng-class="{'toggled': showComments}" data-ng-click="showComments = !showComments">
         keyboard_arrow_down
       </md-icon>
-    </h2>
-    
+    </h3>
+
     <div data-ng-show="showComments">
       <md-list>
         <md-list-item class="md-3-line" ng-repeat="comment in comments">
@@ -19,9 +22,9 @@
           </div>
       </md-list-item>
     </md-list>
-    
+
     <div data-ng-if="authorized">
-      <h2 data-translate="ADD_COMMENT_TITLE"></h2>
+      <h6 data-translate="ADD_COMMENT_TITLE"></h6>
       <md-input-container flex>
         <label data-translate="COMMENT"></label>
         <textarea data-ng-model="comment.text" rows="4"></textarea>
@@ -30,5 +33,5 @@
         <md-button data-translate="ADD_COMMENT_BUTTON" data-ng-click="addComment()" class="md-raised md-primary"></md-button>
       </div>
     </div>
-  </md-card-content>
-</md-card>
+  <!-- </md-card-content>
+</md-card> -->
