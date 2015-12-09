@@ -5,21 +5,11 @@
   padding: 0.2em 0;
 }
 
-// reset
-*:focus {
-  outline: none;
-}
-
 $md-primary: #1E88E5;
 $link-color: #15c;
 $heading-color: #212121;
 $bg-gray: #eee;
 $border-color: rgba(0,0,0,0.12);
-
-ul {
-    -webkit-padding-start: 0em;
-    list-style: none;
-}
 
 @import "iconfont.scss";
 @import "slidedown.scss";
@@ -41,6 +31,7 @@ ul {
 @import "pages/add.scss";
 @import "pages/view-portfolio.scss";
 @import "pages/view-material.scss";
+@import "pages/home.scss";
 
 // Dialog specific stylesheets
 @import "dialogs/add-material.scss";
@@ -52,15 +43,14 @@ html, body {
   line-height: 1.2;
 }
 
-.wrapped {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -hp-pre-wrap;
-  word-wrap: break-word;
+ul {
+    -webkit-padding-start: 0em;
+    list-style: none;
+}
+
+// reset
+*:focus {
+  outline: none;
 }
 
 a {
@@ -79,8 +69,4 @@ a {
   height: 35px;
   background-repeat: no-repeat;
   background-position: left center;
-}
-
-md-fab-speed-dial {
-  position: fixed !important;
 }

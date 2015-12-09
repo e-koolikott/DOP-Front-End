@@ -1,6 +1,17 @@
 // multiline-ellipsis
 $heading-color: #212121;
 
+.wrapped {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+}
+
 .one-row {
   overflow: hidden;
   white-space: nowrap;
